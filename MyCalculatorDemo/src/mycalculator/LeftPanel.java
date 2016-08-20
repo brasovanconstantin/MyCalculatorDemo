@@ -17,7 +17,7 @@ public class LeftPanel extends JPanel {
 	private JCheckBox number3;
 	private JCheckBox number4;
 	String title = "Numbers";
-	
+	MyCalculator myCalculator;
 		
 	public LeftPanel() {
 		super();
@@ -29,6 +29,11 @@ public class LeftPanel extends JPanel {
 		setLayout(layout);
 		
 		addCheckBoxes();
+	}
+
+
+	public LeftPanel(MyCalculator myCalculator) {
+		this.myCalculator = myCalculator;
 	}
 
 
@@ -46,6 +51,7 @@ public class LeftPanel extends JPanel {
 		add(number2);
 		add(number3);
 		add(number4);
+		
 		
 	}
 

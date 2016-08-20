@@ -16,6 +16,14 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
 public class MyCalculator extends JFrame {
+	
+	JPanel rightPanel;
+	
+	
+
+	public JPanel getRightPanel() {
+		return rightPanel;
+	}
 
 	public void startApp() {
 
@@ -33,10 +41,10 @@ public class MyCalculator extends JFrame {
 		BorderLayout mainLayout = new BorderLayout();
 		JPanel mainPanel = new JPanel(mainLayout);
 
-		JPanel leftPanel = new LeftPanel();
+		JPanel leftPanel = new LeftPanel(this);
 		mainPanel.add(leftPanel, BorderLayout.WEST);
 
-		JPanel rightPanel = new RightPanel();
+		rightPanel = new RightPanel();
 		mainPanel.add(rightPanel, BorderLayout.EAST);
 
 		JPanel bottomPanel = new BottomPanel();
